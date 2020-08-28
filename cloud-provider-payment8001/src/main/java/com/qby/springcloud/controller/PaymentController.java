@@ -5,10 +5,7 @@ import com.qby.springcloud.entities.Payment;
 import com.qby.springcloud.service.PaymentService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Slf4j
 @RestController
@@ -17,7 +14,7 @@ public class PaymentController {
     private PaymentService paymentService;
 
     @PostMapping("/payment/create")
-    public CommonResult<Payment> create(Payment payment) {
+    public CommonResult<Payment> create(@RequestBody Payment payment) {
         int flg = paymentService.create(payment);
 
         log.info("插入结果：" + flg);
