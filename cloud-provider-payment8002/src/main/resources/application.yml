@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
 spring:
   application:
     #须注意，如果没有给服务的application命名，那么就需要在yml文件中添加如下配置
