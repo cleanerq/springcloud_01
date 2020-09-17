@@ -17,7 +17,7 @@ public class MyLoadBlance implements IMyLoadBalance {
         int next = 0;
         do {
             current = atomicInteger.get();
-            next = current > Integer.MAX_VALUE ? 0 : current + 1;
+            next = current >= Integer.MAX_VALUE ? 0 : current + 1;
         } while (!atomicInteger.compareAndSet(current, next));
         System.out.println("第几次访问 next:" + next);
         return next;
