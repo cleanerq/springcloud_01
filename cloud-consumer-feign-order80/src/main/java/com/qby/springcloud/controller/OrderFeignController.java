@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.concurrent.TimeUnit;
+
 @RestController
 @Slf4j
 public class OrderFeignController {
@@ -24,5 +26,10 @@ public class OrderFeignController {
     @PostMapping("/payment/create")
     CommonResult<Payment> create(Payment payment) {
         return paymentService.create(payment);
+    }
+
+    @GetMapping(value = "/payemnt/feign/timeout")
+    public String paymentFeignTimeout() {
+        return paymentService.paymentFeignTimeout();
     }
 }

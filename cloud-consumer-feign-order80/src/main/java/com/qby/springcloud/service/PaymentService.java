@@ -15,4 +15,7 @@ public interface PaymentService {
 
     @PostMapping("/payment/create")
     CommonResult<Payment> create(Payment payment);
+
+    @GetMapping(value = "/payemnt/feign/timeout")
+    public String paymentFeignTimeout();
 }
