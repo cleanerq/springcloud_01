@@ -9,3 +9,6 @@ spring:
     name: cloud-provider-hystrix-order
 server:
   port: 80
+ribbon:
+  ReadTimeout: 5000
+  ConnectTimeout: 5000
