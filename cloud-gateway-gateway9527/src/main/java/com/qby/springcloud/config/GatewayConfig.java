@@ -13,14 +13,8 @@ public class GatewayConfig {
     @Bean
     public RouteLocator getRouteLocatorGuonei(RouteLocatorBuilder routeLocatorBuilder) {
         RouteLocatorBuilder.Builder routes = routeLocatorBuilder.routes();
-        routes.route("path_rote_atguigu", r -> r.path("/guonei").uri("http://news.baidu.com/guonei")).build();
-        return routes.build();
-    }
-
-    @Bean
-    public RouteLocator getRouteLocatorGuoji(RouteLocatorBuilder routeLocatorBuilder) {
-        RouteLocatorBuilder.Builder routes = routeLocatorBuilder.routes();
-        routes.route("path_rote_atguigu", r -> r.path("/guoji").uri("http://news.baidu.com/guoji")).build();
+        routes.route("path_rote_guonei", r -> r.path("/guonei").uri("http://news.baidu.com/guonei")).build();
+        routes.route("path_rote_guoji", r -> r.path("/guoji").uri("http://news.baidu.com/guoji")).build();
         return routes.build();
     }
 }
