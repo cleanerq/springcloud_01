@@ -1,0 +1,27 @@
+server:
+  port: 8002
+spring:
+  application:
+    #须注意，如果没有给服务的application命名，那么就需要在yml文件中添加如下配置
+    name: cloud-payment-service
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    username: root
+    password: password
+    url: jdbc:mysql://localhost:3306/db2019?useUnicode=true&characterEncoding=utf-8&useSSL=false
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.qby.springcloud.entities
+eureka:
+  client:
+    register-with-eureka: true   #是否将自己注册到注册中心,集群必须设置为true配合ribbon
+    fetch-registry: true    #是否从服务端抓取已有的注册信息
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版注册两个eureka
+  instance:
+    instance-id: payment8002
+    prefer-ip-address: true
+#eureka服务器中配置的地址#,http://eureka7002.com:7002/eureka
+

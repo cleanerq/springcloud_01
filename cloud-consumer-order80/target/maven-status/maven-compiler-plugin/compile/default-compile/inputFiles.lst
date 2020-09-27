@@ -1,0 +1,6 @@
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\springcloud\controller\OrderController.java
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\springcloud\lb\impl\MyLoadBlance.java
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\myrule\MySelfRule.java
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\springcloud\config\ApplicationContextConfig.java
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\springcloud\lb\IMyLoadBalance.java
+E:\01.idea_project\springcloud_01\cloud-consumer-order80\src\main\java\com\qby\springcloud\OrderMain80.java
