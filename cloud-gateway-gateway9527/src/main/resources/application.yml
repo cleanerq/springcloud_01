@@ -47,7 +47,7 @@ spring:
 #            - After=2020-09-28T10:28:56.312+08:00[Asia/Shanghai] # 当且仅当请求时的时间After配置的时间时，才会转发到用户微服务
 #            - Cookie=username, zzyy
 #            - Header=X-Request-Id, \d+ #请求头参数 X-Request-Id 值为整数
-            - Host=**.baidu.com  #请求头参数 Host:**.baidu.com
+#            - Host=**.baidu.com  #请求头参数 Host:**.baidu.com
 eureka:
   instance:
     hostname: cloud-gateway-service
