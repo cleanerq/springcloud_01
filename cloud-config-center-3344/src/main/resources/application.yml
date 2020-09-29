@@ -11,8 +11,6 @@ spring:
           search-paths:
             - springcloud-config
       label: master
-  config:
-    name: cc
 eureka:
   client:
     service-url:
