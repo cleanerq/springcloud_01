@@ -29,3 +29,7 @@ eureka:
     lease-expiration-duration-in-seconds: 5 # 如果现在超过了5秒的间隔（默认是90秒）
     instance-id: send-8801.com  # 在信息列表时显示主机名称
     prefer-ip-address: true     # 访问的路径变为IP地址
+management:
+  health:
+    rabbit:
+      enabled: false
