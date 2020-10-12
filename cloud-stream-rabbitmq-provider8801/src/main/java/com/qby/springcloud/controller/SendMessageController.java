@@ -1,4 +1,4 @@
-package com.qby.springcloud.service.controller;
+package com.qby.springcloud.controller;
 
 import com.qby.springcloud.service.IMessageProvider;
 import org.springframework.web.bind.annotation.GetMapping;
