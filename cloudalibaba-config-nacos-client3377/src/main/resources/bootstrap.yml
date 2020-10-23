@@ -10,3 +10,4 @@ spring:
       config:
         server-addr: localhost:8848 #配置中心地址
         file-extension: yml #指定yaml格式的配置
+        group: TEST_GROUP
