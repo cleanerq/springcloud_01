@@ -1,24 +1,26 @@
 package com.qby.springcloud.alibaba.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
-import java.util.concurrent.TimeUnit;
-
-@RestController
+@Controller
 public class FlowLimitController {
     @GetMapping("/testA")
+    @ResponseBody
     public String testA() {
-        try {
-            TimeUnit.MILLISECONDS.sleep(800l);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         return "------testA";
     }
 
     @GetMapping("/testB")
+    @ResponseBody
     public String testB() {
         return "------testB";
+    }
+
+    @GetMapping("/testC")
+    public String testC() {
+        System.out.println("testC");
+        return "redirect:/testA";
     }
 }
