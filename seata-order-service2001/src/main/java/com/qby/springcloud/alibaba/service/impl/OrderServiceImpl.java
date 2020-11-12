@@ -41,7 +41,6 @@ public class OrderServiceImpl implements OrderService {
         accountService.decrease(order.getUserId(), order.getMoney());
         log.info("----->订单微服务开始调用账户，做扣减end");
 
-
         //修改订单状态，从零到1代表已经完成
         log.info("----->修改订单状态开始");
         orderDao.update(order.getUserId(), 0);
