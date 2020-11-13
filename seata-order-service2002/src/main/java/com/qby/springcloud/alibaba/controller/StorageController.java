@@ -3,6 +3,7 @@ package com.qby.springcloud.alibaba.controller;
 import com.qby.springcloud.alibaba.domain.CommonResult;
 import com.qby.springcloud.alibaba.service.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,7 +14,7 @@ public class StorageController {
     private StorageService storageService;
 
     //扣减库存
-    @RequestMapping("/storage/decrease")
+    @PostMapping("/storage/decrease")
     public CommonResult decrease(Long productId, Integer count) {
         storageService.decrease(productId, count);
         return new CommonResult(200, "扣减库存成功！");
