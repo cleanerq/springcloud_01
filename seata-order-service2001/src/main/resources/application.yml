@@ -61,7 +61,7 @@ seata:
       exceptionRate: 100
   service:
     vgroup-mapping:
-      my_test_tx_group: default
+      fsp_tx_group: default
     grouplist:
       default: 127.0.0.1:8091
     enable-degrade: false
