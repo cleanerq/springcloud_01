@@ -15,12 +15,12 @@ spring:
     url: jdbc:mysql://localhost:3306/seata_storage
     username: root
     password: password
+feign:
+  hystrix:
+    enabled: false
 logging:
   level:
     io:
       seata: info
 mybatis:
   mapperLocations: classpath:mapper/*.xml
-
-
-
